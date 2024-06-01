@@ -1,0 +1,321 @@
+.rightSection {
+    background-color: var(--col2);
+    height: 100%;
+    padding: 0px 20px;
+    justify-content: space-between;
+    position: fixed;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.chatgptversion {
+    display: flex;
+    align-items: center;
+    height: 10%;
+    color: var(--textcol);
+    font-size: 25px;
+    gap: 10px;
+    z-index: 2;
+}
+
+.chatgptversion svg {
+    width: 20px;
+    height: 20px;
+    z-index: 2;
+}
+
+.nochat {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    color: var(--textcol);
+    font-size: 25px;
+    height: 70%;
+    position: relative;
+}
+
+.nochat .sapa {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-bottom: 10px;
+}
+
+.nochat .greet {
+    display: block;
+    gap: 10px;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-bottom: 10px;
+}
+
+.nochat .sapa h1 {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.nochat .s2 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    gap: 20px;
+    justify-content: center;
+}
+
+.nochat .suggestioncard {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gray;
+    padding: 10px;
+    width: 400px;
+    border-radius: 10px;
+}
+
+.nochat .suggestioncard h2 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.nochat .suggestioncard p {
+    font-size: 16px;
+    font-weight: 400;
+    color: gray;
+}
+
+.bottomsection {
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    position: sticky;
+}
+
+.bottomsection svg {
+    width: 25px;
+    height: 25px;
+    background-color: gray;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.bottomsection svg:hover {
+    cursor: pointer;
+    background-color: rgb(53, 52, 52);
+}
+
+.bottomsection .messagebar {
+    border: 1px solid gray;
+    align-items: center;
+    display: flex;
+    padding: 15px;
+    border-radius: 10px;
+    justify-content: space-between;
+    width: 80%;
+    position: sticky;
+}
+
+.bottomsection .messagebar input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    color: var(--textcol);
+    width: 100%;
+}
+
+.messages {
+    max-height:74% ;
+    width: fit-content;
+    padding-left: 0%;
+    padding-right: 6%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: auto;
+    margin-left:120px;
+}
+
+.messages .message {
+    display: flex;
+    gap: 10px;
+}
+
+.messages .message img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.messages .message div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.messages .message div h2 {
+    color: var(--textcol);
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.messages .message div p {
+    color: var(--textcol);
+    font-size: 15px;
+    max-width: 1000px;
+}
+
+.messages .message:last-child {
+    margin-bottom: 50px;
+}
+
+.bottomsection p {
+    color: rgb(143, 143, 143);
+    align-items: center;
+}
+
+.greet {
+     background: linear-gradient(16deg, #ea3434, #3b3eff);
+     background-size: 250%;
+     font-weight: bold;
+     -webkit-text-fill-color: transparent;
+     -webkit-background-clip: text;
+     animation: animasi 5s linear infinite; 
+}
+
+@keyframes animasi {
+    0% {
+        background-position: 0%;
+    }
+    50% {
+        background-position: 100%;
+    }
+    100% {
+        background-position: 0%;
+    }
+}
+
+.sendIcon {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.ketikkontener {
+    position: fixed;
+    bottom: 0;
+    width: 80%;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid var(--inb);
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+.ketikkontener .ketikkonten {
+    max-width: 950px;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.ketikarea {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.ketikarea textarea {
+    width: 100%;
+    height: 19px;
+    border: none;
+    resize: none;
+    font-size: 1rem;
+    border-radius: 4px;
+    color: white;
+    padding: 15px 45px 15px 20px;
+    background: rgb(53, 52, 52);
+    outline: 1px solid var(--inb);
+}
+
+.ketikarea textarea::placeholder {
+    color: white;
+}
+
+.ketikarea .img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    visibility: hidden;
+    background: rgb(53, 52, 52);
+    border: 1px solid rgb(53, 52, 52);
+}
+
+.ketikarea textarea:valid ~ .img {
+    visibility: visible;
+}
+
+.ketikkonten .img {
+    height: 32px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding-bottom: 10px;
+}
+
+.ketikontrol {
+    display: flex;
+}
+
+.ketikontrol .img {
+    margin-left: 7px;
+    font-size: 1.4rem;
+    border-radius: 4px;
+    background: rgb(53, 52, 52);
+    border: 1px solid rgb(53, 52, 52);
+}
+
+.ketikkonten .img:hover{
+    background: rgb(85, 85, 85);
+}
+.note {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #888;
+        text-align: center;
+
+}
+.scrollbarStyles::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  .scrollbarStyles::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+  }
+  
+  .scrollbarStyles::-webkit-scrollbar-thumb {
+    background-color: #888; /* Change the thumb color */
+    border-radius: 10px;
+    border: transparent;
+  }
+  
+  .scrollbarStyles::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Changes color on hover */
+  }
